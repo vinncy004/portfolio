@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+   color: rgb(15, 11, 11);
+    font-size: 17px;
+    background-color: #eaeaeb;
+    font-family: sans-serif;
+    min-height: 100vh;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar .topnav ul li{
+    list-style-type:none;
+    display: inline-block;
+    height:40px ;
+    color:black ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    margin-left: 50px;
+    margin-top: 7px;
+
+}
+
+.topnav ul{
+    margin-left:55vw; 
+}
+.topnav a{
+   color: rgb(12, 12, 12);
+   text-decoration: none;
+   text-transform: capitalize;
+}
+.topnav a:hover{
+    border-top:1px solid rgb(6, 6, 209);
+    border-bottom: 1px solid blue;
+    font-size: 20px;
+    color: black;
+   
+}
+.topnav{
+    background-color: rgb(217, 226, 225);
+}
+.topnav a:active{
+    color: rgb(47, 2, 212);
+}
+
+
+#welcome{
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+   
+}
+.description{
+    width: 90vw;
+    margin-left:80px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+
+}
+.text{
+    margin-left: 20px;
+}
+.description  li {
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    display: inline-block;
+    gap: 20px;
+   
+}
+
+img{
+    margin-top: 20px;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 5px;
+    margin-left: 30vh;
+    background:linear-gradient(to right,rgba(255,255,255,1)0%,rgba(95, 70, 70, 0)50%),url(img/bgimage.jpg);
+}
+h2{
+    color: rgb(151, 37, 37);
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+ #name{
+    color: rgb(15, 23, 138);
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.skills{
+    text-align: center;
+   
+}
+.trouble-shooting{
+    width: 30vw;
+    height: 50vh;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+p{
+    margin-left: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#para  li{
+    list-style-type:none;
+    margin-left: 50px;
+    color:rgb(23, 23, 117) ;
+    gap: 5px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.samples li{
+    list-style-type: none;
+    display: inline-block;
+    gap: 1px;
+}
+#p{
+    text-align: left;
+}
+.projects{
+    margin-left: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    width: 90vw;
+    color: rgb(34, 34, 41);
+    background-color: rgb(212, 212, 212);
+}
+.projects ul li{
+ list-style-type:none;
+}
+.contacts ul li{
+    list-style: none;
+    list-style-type: none;
+    display: inline-block;
+    gap: 5px;
+}
+.contacts #icons{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+summary{
+    font-weight: bold;
+}
+@media screen and (max-width:480px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+    }
+    .topnav ul li{
+        margin-left: 1px;
+        display: inline-block;
+    }
+    
+    .topnav ul{
+        margin-left: 2px;
+    }
+    .topnav a{
+        color: rgb(15, 15, 15);
+        font-size: 15px;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .topnav a:hover{
+        border-top:2px solid rgb(209, 70, 6);
+        font-size: 25px;
+        color: black;
+    }
+    .topnav{
+        background-color: rgb(238, 255, 252);
+    }
+    .topnav a:active{
+        color: rgb(47, 2, 212);
+    }
+    
+    
+    #welcome{
+        font-size: 27px;
+        text-align: center;
+        text-decoration: underline;
+       
+    }
+    .description{
+        width: 90vw;
+        margin-left: 1px;
+        display:block;
+        color: white;
+        background-color: rgb(29, 28, 44);
+    
+    }
+    
+    .description  li {
+        list-style-type: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        display: block;
+        gap: 3px;
+       
+    }
+    
+    img{
+        width: 90vw;
+        height: 30vh;
+        border-radius: 5px;
+        margin-left: 1px;
+    }
+    h2{
+        color: rgb(151, 37, 37);
+        font-size: 25px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       
+    }
+     #name{
+        color: rgb(255, 60, 0);
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .skills{
+        text-align: center;
+       
+    }
+    .trouble-shooting{
+        width: 90vw;
+        height: 40vh;
+        margin-left: 1px;
+        border-radius: 4px;
+    }
+    p{
+        margin-left: ;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #para  li{
+        list-style-type:none;
+        margin-left: 50px;
+        color:rgb(149, 149, 182) ;
+        gap: 1px;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .samples li{
+        list-style-type: none;
+        display: block;
+        gap: 1px;
+    }
+    #p{
+        text-align: left;
+    }
+    .projects{
+        margin-left: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+        color: rgb(34, 34, 41);
+        background-color: rgb(233, 233, 233);
+    }
+    .projects ul li{
+     list-style-type:none;
+    }
+    .contacts ul li{
+        list-style: none;
+        list-style-type: none;
+        display:block;
+        gap: 1px;
+    }
+    .contacts #icons{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+}
