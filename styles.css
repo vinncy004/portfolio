@@ -171,7 +171,7 @@ p{
 summary{
     font-weight: bold;
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width:490px) {
     *{
         padding: 0;
         margin: 0;
