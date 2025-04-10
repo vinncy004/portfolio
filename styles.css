@@ -185,7 +185,7 @@ summary{
       display: flex;
       flex-direction: column;
       height: fit-content;
-      margin-left: 2px;
+      margin-left: 6px;
       margin-right: 2px;
     }
     .topnav ul{
