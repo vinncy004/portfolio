@@ -131,12 +131,16 @@ p{
         background-color: transparent;
     }
 }
+#c{
+    font-family:"zain",sans-serif;
+    font-size: 20px;
+}
 #para  li{
     list-style-type:none;
     margin-left: 50px;
     color:rgb(23, 23, 117) ;
     gap: 5px;
-    font-size: 15px;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .samples li{
