@@ -226,7 +226,7 @@ summary{
        
     }
     .description{
-        width: 90vw;
+        width: 95vw;
         margin-left: 1px;
         display:block;
         color: white;
@@ -328,5 +328,8 @@ summary{
         width: 20px;
         height: 20px;
         border-radius: 50%;
+    }
+    #footer{
+        background-color: #c2bebe;
     }
 }
