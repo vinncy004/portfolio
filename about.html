@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>about</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+  
+  
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+        </style>
+
+</head>
 </head>
 <body>
-    <p id="p">
+    <div class="navbar">
+           
+        <nav class="topnav">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html" >skills</a></li>
+                <li><a href="projects.html" >projects</a></li>
+                <li><a href="about.html">about</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+    <p id="para" >
         <p id="p"> Greetings!</p>
         I'm Peter Vincent,undergraduate computer science student dedicated and passionate professional with a wealth of experience in the dynamic intersection of technology. Over the past three years, I have immersed myself in the realms of software engeneering Technologies, Web Development, and DevOps practices.
         
@@ -18,7 +39,7 @@
         
     </p>
     <br>
-    <h2 style="color: rgb(59, 19, 19);">experience and certifications</h2>
+    <h5 style="color: rgb(18, 209, 200);">experience and certifications</h5>
     <br>
     <ul>
       <li id="c"> Industrial training (may-august -2024)</li>
@@ -29,10 +50,10 @@
  <h2 name="contacts">contact info:</h2>
  <ul>
   <li>
-     <a href="https://www.facebook.com/cate.moraa.581"> <img src="img/facebook.png" alt="facebook" id="icons"></a>
+     <a href="https://www.facebook.com/vincent.basu.3"> <img src="img/facebook.png" alt="facebook" id="icons"></a>
   </li>
   <li> <a href="https://wa.me/+254703835240"> <img src="img/whatsaap.png "alt="whatsaap" id="icons"></a></li>
-  <li> <a href="#"> <img src="data:image/png;base64,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" alt="linkedln" id="icons"></a></li>
+  <li> <a href="https://www.linkedin.com/in/vincent-peter-8477b2317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "> <img src="data:image/png;base64,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" alt="linkedln" id="icons"></a></li>
   <li> <a href="https://x.com/petervinny0"> <img src="data:image/jpeg;base64,/9j/4AAQS
       kZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0t
       MTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc
