@@ -331,7 +331,7 @@ summary{
         width: 99vw;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: fit-content;
     }
     .projects a{
         font-family: "zain",sans-serif;
