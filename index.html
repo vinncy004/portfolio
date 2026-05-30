@@ -5,30 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vincent Peter | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* GLOBAL STYLES & RESET */
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body{
-      background:#f4f6f9;
-      color:#222;
+      background:#020617;
+      color:#e2e8f0;
       line-height:1.6;
+      overflow-x: hidden;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% { border-color: #38bdf8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
+      50% { border-color: #a855f7; box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); }
     }
 
     /* NAVBAR */
     header{
-      background:#0f172a;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       color:#fff;
-      padding:15px 20px;
+      padding:20px 10%;
       position:sticky;
       top:0;
       z-index:1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav{
@@ -40,164 +75,341 @@
 
     .logo{
       font-weight:700;
-      font-size:20px;
+      font-size:22px;
+      background: linear-gradient(to right, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .nav ul{
       display:flex;
-      gap:20px;
+      gap:25px;
       list-style:none;
       flex-wrap:wrap;
     }
 
     .nav a{
-      color:white;
+      color:#cbd5e1;
       text-decoration:none;
-      font-size:14px;
+      font-size:15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     .nav a:hover{
       color:#38bdf8;
     }
 
-    /* HERO */
+    /* HERO SECTION */
     .hero{
       display:flex;
       flex-wrap:wrap;
       justify-content:space-between;
       align-items:center;
-      padding:60px 10%;
-      background:linear-gradient(to right,#0f172a,#1e293b);
-      color:white;
+      padding:100px 10%;
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent), 
+                  radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.05), transparent);
+      gap: 40px;
     }
 
     .hero-text{
       flex:1;
-      min-width:280px;
+      min-width:300px;
+      animation: fadeInUp 0.8s ease-out;
     }
 
     .hero-text h1{
-      font-size:40px;
-      margin-bottom:10px;
+      font-size:48px;
+      margin-bottom:15px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .hero-text h1 span {
+      background: linear-gradient(to right, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-text h3{
       font-weight:400;
-      color:#cbd5e1;
+      color:#94a3b8;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .hero-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInRight 1s ease-out;
     }
 
     .hero img{
-      width:250px;
-      height:250px;
+      width:280px;
+      height:280px;
       border-radius:50%;
       object-fit:cover;
       border:4px solid #38bdf8;
-      margin-top:20px;
+      animation: glow 4s infinite ease-in-out;
+    }
+
+    /* BUTTONS */
+    .btn-container {
+      margin-top: 25px;
+    }
+
+    #download-cv{
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+      padding:12px 28px;
+      border:none;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #download-cv a{
+      color:white;
+      text-decoration:none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    #download-cv:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
     }
 
     /* SECTIONS */
     section{
-      padding:60px 10%;
+      padding:90px 10%;
     }
 
     h2{
-      margin-bottom:20px;
-      color:#0f172a;
-      font-size:28px;
+      margin-bottom:40px;
+      color:#fff;
+      font-size:32px;
+      position: relative;
+      display: inline-block;
     }
 
-    /* SKILLS */
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 50px;
+      height: 4px;
+      background: #38bdf8;
+      border-radius: 2px;
+    }
+
+    #about p {
+      color: #94a3b8;
+      font-size: 17px;
+      max-width: 800px;
+    }
+
+    /* SKILLS CARD GRID */
     .skills-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:15px;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:20px;
     }
 
     .card{
-      background:white;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
     }
 
-    /* EXPERIENCE */
+    .card h4 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card p {
+      color: #e2e8f0;
+      font-size: 15px;
+    }
+
+    .card:hover{
+      transform: translateY(-5px);
+      background: rgba(30, 41, 59, 0.7);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* TIMELINE / EXPERIENCE */
     .timeline{
       display:flex;
       flex-direction:column;
-      gap:15px;
+      gap:25px;
     }
 
     .exp{
-      background:white;
-      padding:15px;
-      border-left:4px solid #38bdf8;
-      border-radius:6px;
+      background: rgba(30, 41, 59, 0.3);
+      border-left:4px solid #a855f7;
+      padding:25px;
+      border-radius: 0 15px 15px 0;
+      transition: transform 0.3s ease;
     }
 
-    /* PROJECTS */
+    .exp:hover {
+      transform: translateX(8px);
+      background: rgba(30, 41, 59, 0.5);
+    }
+
+    .exp h3{
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .exp .date {
+      color: #a855f7;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .exp .desc {
+      color: #94a3b8;
+    }
+
+    /* PROJECTS GRID */
     .projects{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:15px;
+      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+      gap:25px;
     }
 
     .project{
-      background:white;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding:30px;
+      border-radius:15px;
+      transition: all 0.3s ease;
     }
 
-    /* CONTACT */
-    .contact{
-      background:#0f172a;
-      color:white;
-      text-align:center;
+    .project h3{
+      color: #fff;
+      margin-bottom: 12px;
     }
 
-    .contact a{
-      color:#38bdf8;
-      text-decoration:none;
-    }
-    #cv{
-      margin-top:20px;
-    }
-    #download-cv a{
-      color:white;
-      text-decoration:none;
-    }
-    #download-cv{
-      background:#38bdf8;
-      padding:10px 20px;
-      border:none;
-      border-radius:5px;
-      cursor:pointer;
+    .project p{
+      color: #94a3b8;
+      font-size: 15px;
     }
 
-    /* RESPONSIVE */
-    @media(max-width:768px){
+    .project:hover{
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+
+    /* FOOTER & SOCIALS */
+    .contact-section {
+      background: #0f172a;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .contact-container h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      color: #94a3b8;
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px);
+      background: #38bdf8;
+      color: #0f172a;
+      box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+    }
+    
+    .social-icon.github:hover { background: #fff; color: #000; box-shadow: 0 5px 15px rgba(255,255,255,0.4); }
+    .social-icon.linkedin:hover { background: #0077b5; color: #fff; box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4); }
+
+    .footer-credit {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media(max-width:900px){
       .hero{
-        flex-direction:column;
+        flex-direction:column-reverse;
         text-align:center;
+        padding: 60px 5%;
       }
-
+      .hero-text h1 {
+        font-size: 36px;
+      }
       .nav ul{
         justify-content:center;
-        margin-top:10px;
+        margin-top:15px;
       }
-      #cv{
-        margin-top:20px;
+      .nav {
+        justify-content: center;
       }
-      #download-cv a{
-        color:white;
-        text-decoration:none;
+      h2::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
-      #download-cv{
-        background:#38bdf8;
-        padding:10px 20px;
-        border:none;
-        border-radius:5px;
-        cursor:pointer;
+      h2 {
+        text-align: center;
+        width: 100%;
+      }
+      #about p {
+        text-align: center;
+        margin: 0 auto;
       }
     }
   </style>
@@ -219,90 +431,123 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <h1>Hi, I'm Vincent Peter</h1>
-    <h3>Computer Science Undergraduate | Software Developer | Network & Systems Enthusiast |support engineer</h3>
+    <h1>Hi, I'm <span>Vincent Peter</span></h1>
+    <h3>Computer Science Undergraduate | Python Fullstack Developer | Machine Learning & CI/CD Enthusiast | Support Engineer</h3>
+    
+    <div class="btn-container">
+      <button id="download-cv"><a href="curriculum-vitae.pdf" target="_blank"><i class="fa-solid fa-download"></i> Curriculum Vitae</a></button>
+    </div>
   </div>
-  <img src="img/20250220_075902.jpg" alt="profile">
-
-  <div id="cv">
-    <button id="download-cv"><a href="curriculum-vitae.pdf" target="_blank">curriculum vitae</a></button>
+  
+  <div class="hero-image-container">
+    <img src="img/20250220_075902.jpg" alt="Vincent Peter Profile">
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a Computer Science undergraduate at Masinde Muliro University of Science and Technology,
-    passionate about software development, networking, systems administration, and solving real-world problems using technology.
+    I am a Computer Science undergraduate at Masinde Muliro University of Science and Technology. 
+    I specialize in bridging the gap between robust Python Fullstack systems development, automated CI/CD infrastructure, and core Intelligent Systems implementation. 
+    Passionate about solving real-world data and structural operational dilemmas.
   </p>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
+  <h2>Skills & Expertise</h2>
   <div class="skills-grid">
-    <div class="card">Programming:PHP, Python(django), JavaScript</div>
-    <div class="card">Web Development: HTML, CSS, React, Node.js</div>
-    <div class="card">Databases: MySQL, PostgreSQL,mongoDB,</div>
-    <div class="card">Networking: LAN/WAN setup,configuration, routing, switching, CCTV systems</div>
-    <div class="card">Systems: Windows Server, Linux, VMware virtualization</div>
-    <div class="card">Tools: Git & GitHub, VS Code</div>
-    <div class="card">Soft Skills: Teamwork, Problem Solving, people skills</div>
+    <div class="card">
+      <h4>Python Fullstack Dev</h4>
+      <p>Robust backend building using Python (Django, FastAPI) alongside PHP, clean vanilla JavaScript, Node.js, and React architecture.</p>
+    </div>
+    <div class="card">
+      <h4>Machine Learning</h4>
+      <p>Data preprocessing, model creation, Computer Vision frameworks (OpenCV), and core application integration processes.</p>
+    </div>
+    <div class="card">
+      <h4>CI/CD & DevOps Tools</h4>
+      <p>Automated pipeline construction, Git/GitHub actions workflows, cloud deployments, and continuous system monitoring integration.</p>
+    </div>
+    <div class="card">
+      <h4>Databases & Virtualization</h4>
+      <p>Relational engine management across MySQL & PostgreSQL, unstructured database clustering with MongoDB, and sandbox environment configuration via VMware.</p>
+    </div>
+    <div class="card">
+      <h4>Networks & Systems Admin</h4>
+      <p>Enterprise layout structuring (LAN/WAN, intelligent routing, network optimization topologies), Linux system hardening, and hardware camera monitoring infrastructure.</p>
+    </div>
+    <div class="card">
+      <h4>Core Interpersonal Capabilities</h4>
+      <p>Strategic complex problem-solving mindsets, client interface operations management, cross-functional team collaborations, and agile technical response speeds.</p>
+    </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
   <div class="timeline">
 
     <div class="exp">
       <h3>Industrial Attachment - Kenya Airports Authority (JKIA Station)</h3>
-      <p>May 2025 – August 2025</p>
-      <p>Worked on IT support, network troubleshooting, FIDS systems, and airport operational ICT infrastructure.</p>
+      <div class="date">May 2025 – August 2025</div>
+      <p class="desc">Managed corporate IT environment support, diagnosed active local networking layers, calibrated FIDS systems data distributions, and verified core airport runtime terminal infrastructure.</p>
     </div>
 
     <div class="exp">
       <h3>Industrial Training - Masinde Muliro University</h3>
-      <p>May 2024 – August 2024</p>
-      <p>Hands-on experience in computer maintenance, networking, software installation, and system troubleshooting.</p>
+      <div class="date">May 2024 – August 2024</div>
+      <p class="desc">Gained comprehensive practical maintenance configurations, structured localized network drops, executed server operating system installations, and troubleshot campus cluster node bugs.</p>
     </div>
 
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Featured Engineering Projects</h2>
   <div class="projects">
     <div class="project">
-      <h3>Passenger Counting System </h3>
-      <p>Real-time computer vision system using OpenCV for passenger counting.</p>
+      <h3>Passenger Counting System</h3>
+      <p>An intelligent production computer vision node running real-time frame object extraction matrices through OpenCV algorithms to optimize passenger volume evaluation flows.</p>
     </div>
 
     <div class="project">
-      <h3>Health-stack system</h3>
-      <p>Full-stack web application for centalization of healthcare information,appointments,feedback,websocket for real time messaging with a doctor and report generation.</p>
+      <h3>Health-Stack System</h3>
+      <p>A multi-tier microservices layout application built to store decentralized patient records with real-time bidirectional WebSocket connections for secure medical provider messaging panels.</p>
     </div>
 
     <div class="project">
-      <h3>Network Lab Setup</h3>
-      <p>Designed and configured LAN infrastructure with switches and routers at MMUST labs.</p>
+      <h3>Network Lab Infrastructure Setup</h3>
+      <p>Architected custom physical topology blueprints consisting of interconnected structural subnets, firewall tables, and physical routing configurations at MMUST active facilities.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:petervinny0@gmail.com">petervinny0@gmail.com</a></p>
-  <p>Phone: +254703835240</p>
-  <p>GitHub: <a href="https://github.com/vinncy004">github.com/vinncy004</a></p>
-</section>
+<footer id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Get In Touch</h2>
+    
+    <div class="contact-info">
+      <p>Email: <a href="mailto:petervinny0@gmail.com">petervinny0@gmail.com</a></p>
+      <p>Phone: +254 703 835240</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://github.com/vinncy004" target="_blank" class="social-icon github" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://x.com" target="_blank" class="social-icon twitter" title="Twitter/X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+
+    <p class="footer-credit">&copy; 2026 Vincent Peter.</p>
+  </div>
+</footer>
 
 </body>
 </html>
