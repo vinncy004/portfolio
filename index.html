@@ -540,14 +540,18 @@
       <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-      <a href="https://x.com" target="_blank" class="social-icon twitter" title="Twitter/X">
+      <a href="https://x.com/PeterG17617207" target="_blank"  title="Twitter/X"><img src="img/x.png" class="social-icon twitter" alt="">
         <i class="fa-brands fa-x-twitter"></i>
       </a>
     </div>
 
-    <p class="footer-credit">&copy; 2026 Vincent Peter.</p>
+    <p class="footer-credit">&copy; <span id="currentYear"></span> Vincent Peter.</p>
   </div>
 </footer>
 
+<script>
+  // Set current year in footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();  
+</script>
 </body>
 </html>
